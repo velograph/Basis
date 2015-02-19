@@ -1,0 +1,18 @@
+/*!
+* Theme Name:  {%= title %}
+* Theme URI:   {%= homepage %}
+* Description: {%= description %}
+* Author:      {%= author_name %}
+* Author URI:  {%= author_url %}
+* Version:     0.1.0
+* Tags:
+* Text Domain: {%= language %}
+* Domain Path: /languages/
+*
+* License:     Commercial
+*/
+
+@import "bourbon/bourbon";
+@import "base/grid-settings";
+@import "neat/neat";
+@import "base/base";
