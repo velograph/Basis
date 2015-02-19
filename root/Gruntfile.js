@@ -51,7 +51,7 @@ module.exports = function( grunt ) {
     cssmin: {
       minify: {
         expand: true,
-        src: ['style.css'],
+        src: ['css/style.css'],
         ext: '.css'
       }
     },
@@ -63,6 +63,7 @@ module.exports = function( grunt ) {
         },
         files: {
           'js/main.min.js': [
+            'js/app.js'
           ]
         }
       }
@@ -73,6 +74,7 @@ module.exports = function( grunt ) {
         tasks: ['sass', 'uglify'],
       },
       js: {
+        files: ['js/app.js'],
         tasks: ['uglify'],
       },
       images: {
