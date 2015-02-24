@@ -70,8 +70,8 @@ module.exports = function( grunt ) {
     },
     watch: {
       sass: {
-        files: ['sass/*.{scss,sass}', 'sass/**/*.scss'],
-        tasks: ['sass', 'uglify'],
+          files: ['sass/*.{scss,sass}', 'sass/**/*.scss', 'neat/**/*.scss', 'bourbon/**/*.scss', 'base/**/*.scss'],
+          tasks: ['sass', 'uglify'],
       },
       js: {
         files: ['js/app.js'],
