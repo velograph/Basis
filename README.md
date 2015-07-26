@@ -29,7 +29,7 @@ _Note that this template will generate files in the current directory, so be sur
 Install the NPM modules required to actually process your newly-created project by running:
 
 ```
-npm install
+sudo npm install
 ```
 
 Run Grunt so it can generate your style.css
