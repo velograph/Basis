@@ -88,7 +88,14 @@ add_action( 'widgets_init', '{%= prefix %}_widgets_init' );
 function {%= prefix %}_scripts() {
 	wp_enqueue_style( '{%= prefix %}-style', get_stylesheet_directory_uri() . '/css/style.css', false, filemtime(get_stylesheet_directory() . '/css/style.css') );
 
-	wp_enqueue_script( '{%= prefix %}-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( '{%= prefix %}-site-scripts', get_template_directory_uri() . '/js/site-scripts.js', array(), '20130115', true );
+
+	wp_enqueue_script( '{%= prefix %}-jQuery', '//code.jquery.com/ui/1.11.4/jquery-ui.js', false, true );
+
+	wp_enqueue_script( '{%= prefix %}-pictureFill', get_template_directory_uri() . '/js/pictureFill.js', array(), '20130115', true );
+
+	wp_enqueue_script( '{%= prefix %}-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20130115', true );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -110,3 +117,41 @@ require get_template_directory() . '/inc/extras.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Declare Woocommerce support
+ */
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_image_size( 'portal-mobile', '480', '360', 'true' );
+add_image_size( 'portal-tablet', '768', '576', 'true' );
+add_image_size( 'portal-desktop', '1280', '960', 'true' );
+add_image_size( 'portal-retina', '2400', '1800', 'true' );
+
+// Remove Woo styling
+add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+/**
+ * TypeKit Fonts
+ */
+function theme_typekit() {
+    wp_enqueue_script( 'theme_typekit', '//use.typekit.net/bpk6lyp.js');
+}
+add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+
+function theme_typekit_inline() {
+  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<?php }
+}
+add_action( 'wp_head', 'theme_typekit_inline' );
+
+// Disable reviews on products
+add_filter( 'woocommerce_product_tabs', 'wcs_woo_remove_reviews_tab', 98 );
+function wcs_woo_remove_reviews_tab($tabs) {
+ unset($tabs['reviews']);
+ return $tabs;
+}
