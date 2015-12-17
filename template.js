@@ -28,10 +28,10 @@ exports.template = function (grunt, init, done) {
 		default: 'basis'
 	},
 	init.prompt('description', 'Yet Another Wordpress Theme'),
-	init.prompt('homepage', 'http://velograph.net'),
-	init.prompt('author_name', 'Velograph'),
-	init.prompt('author_email', 'velograph@gmail.com'),
-	init.prompt('author_url', 'http://velograph.net'),
+	init.prompt('homepage', 'http://velograph.co'),
+	init.prompt('author_name', 'Jason Britton'),
+	init.prompt('author_email', 'jason@velograph.co'),
+	init.prompt('author_url', 'http://velograph.co'),
 	init.prompt('repository', 'git@github.com:velograph/basis.git'),
 {
 	name   : 'four_oh_four_template',
@@ -45,28 +45,28 @@ exports.template = function (grunt, init, done) {
 },
 {
 	name   : 'comments_template',
-	message: 'Do you want an comments.php? [Y/n]',
+	message: 'Do you want a comments.php? [Y/n]',
 	default: 'y'
 },
 {
 	name   : 'search_template',
-	message: 'Do you want an search.php? [Y/n]',
+	message: 'Do you want a search.php? [Y/n]',
 	default: 'y'
 },
 {
 	name   : 'search_form_template',
-	message: 'Do you want an searchform.php? [Y/n]',
+	message: 'Do you want a searchform.php? [Y/n]',
 	default: 'y'
 },
 {
 	name   : 'custom_header_include',
 	message: 'Do you want a custom header? [Y/n]',
-	default: 'y'
+	default: 'n'
 },
 {
 	name   : 'customizer_include',
 	message: 'Will you use the theme customizer? [Y/n]',
-	default: 'y'
+	default: 'n'
 },
 {
 	name   : 'jetpack_support',
