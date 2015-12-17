@@ -94,6 +94,8 @@ function {%= prefix %}_scripts() {
 
 	wp_enqueue_script( '{%= prefix %}-pictureFill', get_template_directory_uri() . '/js/pictureFill.js', array(), '20130115', true );
 
+	wp_enqueue_script( '{%= prefix %}-matchHeight', get_template_directory_uri() . '/js/matchHeight.min.js', array(), '20130115', true );
+
 	wp_enqueue_script( '{%= prefix %}-slick', get_template_directory_uri() . '/js/slick.min.js', array(), '20130115', true );
 
 
