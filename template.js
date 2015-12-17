@@ -60,12 +60,12 @@ exports.template = function (grunt, init, done) {
 },
 {
 	name   : 'custom_header_include',
-	message: 'Do you want a custom header? [Y/n]',
+	message: 'Do you want a custom header? [y/N]',
 	default: 'n'
 },
 {
 	name   : 'customizer_include',
-	message: 'Will you use the theme customizer? [Y/n]',
+	message: 'Will you use the theme customizer? [y/N]',
 	default: 'n'
 },
 {
