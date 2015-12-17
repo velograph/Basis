@@ -102,12 +102,6 @@
 
 button.slick-arrow {
     outline: 0;
-    svg {
-        fill: $light-gray;
-        &:hover {
-            fill: $gray;
-        }
-    }
 }
 
 $slick-arrow-color: white !default;
