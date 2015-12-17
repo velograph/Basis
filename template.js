@@ -70,8 +70,8 @@ exports.template = function (grunt, init, done) {
 },
 {
 	name   : 'jetpack_support',
-	message: 'Will you use be using Jetpack? [Y/n]',
-	default: 'y'
+	message: 'Will you use be using Jetpack? [y/N]',
+	default: 'n'
 }
 
 ], function (err, props) {
