@@ -82,7 +82,6 @@ exports.template = function (grunt, init, done) {
 		'matchdep'             : '~2.0.0',
 		'grunt-contrib-uglify' : '~3.3.0',
 		'grunt-contrib-cssmin' : '~2.2.1',
-		'grunt-contrib-jshint' : '~1.2.0',
 		'grunt-contrib-sass'   : '~1.0.0',
 		'grunt-contrib-watch'  : '~1.1.0',
 		'grunt-sass' : '2.1.0',
